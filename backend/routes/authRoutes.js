@@ -263,6 +263,9 @@ router.post('/forgot-password', [
       });
     }
 
+
+
+    
     // Generate reset token
     const resetToken = generateTokenHash();
     user.resetPasswordToken = resetToken;
