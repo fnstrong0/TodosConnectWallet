@@ -262,11 +262,7 @@ router.post('/forgot-password', [
         message: 'If that email exists, a password reset link has been sent'
       });
     }
-
-
-
-    
-    // Generate reset token
+  // Generate reset token
     const resetToken = generateTokenHash();
     user.resetPasswordToken = resetToken;
     user.resetPasswordExpire = Date.now() + 10 * 60 * 1000; // 10 minutes
