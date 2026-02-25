@@ -41,10 +41,6 @@ router.get('/:id', async (req, res, next) => {
     next(error);
   }
 });
-
-// @route   POST /api/categories
-// @desc    Create new category
-// @access  Private/Admin
 router.post('/', protect, authorize('admin'), async (req, res, next) => {
   try {
     const category = await Category.create(req.body);
